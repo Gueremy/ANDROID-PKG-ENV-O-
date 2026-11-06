@@ -1,0 +1,12 @@
+<resources>
+    <color name="bg">#0A1020</color>
+    <color name="card">#151E33</color>
+    <color name="input">#0E1629</color>
+    <color name="input_stroke">#2B3955</color>
+    <color name="primary">#F4F7FF</color>
+    <color name="secondary">#9BAAC6</color>
+    <color name="blue">#4A94FF</color>
+    <color name="blue_light">#82B6FF</color>
+    <color name="green">#5EE6B1</color>
+    <color name="red">#FF798A</color>
+</resources>

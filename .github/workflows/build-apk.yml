@@ -1,0 +1,57 @@
+name: Compilar y publicar PKG Bridge
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+      - name: Preparar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Preparar SDK Android
+        uses: android-actions/setup-android@v3
+      - name: Instalar SDK API 35
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Instalar Gradle 8.13
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Generar APK
+        run: gradle --no-daemon :app:assembleDebug -PbuildNumber=${{ github.run_number }}
+      - name: Preparar descarga
+        run: |
+          mkdir -p distribucion
+          cp app/build/outputs/apk/debug/app-debug.apk distribucion/PKGBridge.apk
+          cd distribucion
+          sha256sum PKGBridge.apk > SHA256SUMS.txt
+      - name: Conservar APK de la compilación
+        uses: actions/upload-artifact@v4
+        with:
+          name: PKGBridge-apk
+          path: distribucion/PKGBridge.apk
+          if-no-files-found: error
+      - name: Publicar enlace de descarga permanente
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: beta-${{ github.run_number }}
+          name: PKG Bridge · Beta ${{ github.run_number }}
+          body: |
+            APK Android experimental para transferir archivos PKG por FTP en red local.
+            Descarga PKGBridge.apk e instálalo en Android 8.0 o superior.
+            Firmado automáticamente en modo debug: para actualizar puede ser necesario desinstalar la versión anterior.
+          files: |
+            distribucion/PKGBridge.apk
+            distribucion/SHA256SUMS.txt
+          make_latest: true
+          generate_release_notes: false

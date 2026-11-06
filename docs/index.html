@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1121">
+  <meta name="description" content="PKG Bridge: cliente FTP para enviar archivos PKG desde Android a tu PS4 con GoldHEN por la red local.">
+  <title>PKG Bridge | Descarga para Android</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; --bg: #0b1121; --card: #151e32; --muted: #a6b2c6; --line: #2e3b55; --blue: #4a92ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #f3f7ff; background: radial-gradient(ellipse 70% 45% at 50% -4%, #1f3f78, transparent 75%), var(--bg); min-height: 100vh; }
+    a { color: inherit; }
+    .wrap { width: min(100% - 36px, 950px); margin-inline: auto; }
+    header { border-bottom: 1px solid #ffffff18; }
+    .topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; gap: 12px; align-items: center; font-size: 19px; font-weight: 800; letter-spacing: -.5px; }
+    .logo { width: 39px; height: 39px; display: grid; place-items: center; background: linear-gradient(145deg, #67bcff, #315df8); border-radius: 12px; font-size: 23px; }
+    .source { color: var(--muted); font-size: 14px; text-decoration: none; }
+    .source:hover, footer a:hover { color: #fff; }
+    main { padding-top: 70px; }
+    .hero { text-align: center; max-width: 760px; margin-inline: auto; }
+    .eyebrow { display: inline-flex; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #99c6ff; border: 1px solid #345382; border-radius: 999px; padding: 8px 14px; background: #1a2a46; }
+    h1 { letter-spacing: -2px; line-height: 1.07; font-size: clamp(38px, 7vw, 65px); margin: 24px 0; }
+    h1 span { color: #72abff; }
+    p.lead { max-width: 650px; margin: 0 auto; font-size: clamp(16px, 2.5vw, 19px); line-height: 1.7; color: #b5c0d3; }
+    .actions { margin: 35px auto 12px; display: flex; align-items: center; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .primary, .secondary { text-decoration: none; display: inline-flex; gap: 10px; justify-content: center; align-items: center; min-height: 53px; padding: 0 22px; border-radius: 12px; font-weight: 750; }
+    .primary { background: #4a92ff; color: #07172b; box-shadow: 0 12px 35px #3488ff32; }
+    .primary:hover { background: #77acff; }
+    .secondary { background: #1a2740; border: 1px solid #3b5278; color: #e0edff; }
+    .secondary:hover { background: #223655; }
+    .note { font-size: 13px; color: #a3b0c5; margin: 14px 0 0; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 70px 0 46px; }
+    .feature { padding: 25px 23px; background: #151f33e8; border: 1px solid #2b3a55; border-radius: 18px; text-align: left; }
+    .feature .emoji { font-size: 27px; }
+    .feature h2 { font-size: 17px; margin: 16px 0 7px; }
+    .feature p { color: #aab6c9; line-height: 1.65; margin: 0; font-size: 14px; }
+    .details { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; margin-bottom: 65px; }
+    .panel { padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+    .panel h2 { margin: 0 0 18px; font-size: 20px; }
+    ol { padding-left: 21px; margin: 0; color: #bfc9da; line-height: 1.9; }
+    li { padding-left: 3px; margin: 6px 0; }
+    code { background: #263854; padding: 3px 6px; border-radius: 5px; color: #a8cbff; }
+    .panel p { color: #bfc9da; margin: 0 0 12px; line-height: 1.7; font-size: 14px; }
+    .panel strong { color: #eef4ff; }
+    footer { color: #95a6c1; border-top: 1px solid #ffffff18; padding: 23px 0 35px; font-size: 13px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    footer a { color: #b3c7e5; }
+    @media (max-width: 700px) { main { padding-top: 55px; } .features, .details { grid-template-columns: 1fr; } .features { margin-top: 55px; } .feature { padding: 21px; } .panel { padding: 22px; } .actions a { width: min(100%, 340px); } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand"><span class="logo" aria-hidden="true">⇄</span> PKG Bridge</div>
+    <a class="source" href="https://github.com/Gueremy/PKGBridge" rel="noopener noreferrer">Código fuente en GitHub ↗</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero" aria-labelledby="titular">
+    <span class="eyebrow">ANDROID · FTP · GOLDHEN</span>
+    <h1 id="titular">Manda archivos <span>PKG</span> desde tu teléfono.</h1>
+    <p class="lead">Conecta tu Android a tu PS4 por la misma red Wi-Fi. Escribe la IP, el puerto FTP, selecciona el archivo y mira cómo se transfiere, sin usar un PC.</p>
+    <div class="actions">
+      <a class="primary" href="https://github.com/Gueremy/PKGBridge/releases/latest/download/PKGBridge.apk" download>⬇ Descargar APK para Android</a>
+      <a class="secondary" href="https://github.com/Gueremy/PKGBridge/releases/latest" rel="noopener noreferrer">Ver versión disponible ↗</a>
+    </div>
+    <p class="note">APK de prueba gratuito · Android 8.0 o superior · No disponible en Google Play</p>
+  </section>
+
+  <section class="features" aria-label="Características">
+    <article class="feature"><div class="emoji">📡</div><h2>Conexión directa</h2><p>Usa la IP local y el puerto de tu PS4. Por defecto, puerto 2121 para GoldHEN.</p></article>
+    <article class="feature"><div class="emoji">📁</div><h2>Archivos grandes</h2><p>Selecciona tu PKG desde el teléfono y envíalo por streaming sin duplicar el archivo.</p></article>
+    <article class="feature"><div class="emoji">📊</div><h2>Progreso en vivo</h2><p>Consulta porcentaje, megabytes enviados y velocidad media; cancela si lo necesitas.</p></article>
+  </section>
+
+  <section class="details" aria-label="Cómo usar PKG Bridge">
+    <div class="panel">
+      <h2>Cómo usar la app</h2>
+      <ol>
+        <li>Activa el servidor FTP de GoldHEN en la PS4.</li>
+        <li>Conecta el teléfono y la consola a la misma red local.</li>
+        <li>Escribe la IP de la PS4, usa puerto <code>2121</code> y carpeta <code>/data/pkg</code>.</li>
+        <li>Selecciona tu archivo <code>.pkg</code> y pulsa «Enviar PKG».</li>
+        <li>Cuando termine, instala el paquete desde Package Installer en la PS4.</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h2>Antes de instalar</h2>
+      <p><strong>1.</strong> Descarga el APK desde el botón superior.</p>
+      <p><strong>2.</strong> Android puede pedirte autorización para «Instalar aplicaciones desconocidas» desde el navegador.</p>
+      <p><strong>3.</strong> Abre el APK para instalarlo.</p>
+      <p>El APK está firmado con una clave de depuración para pruebas. Las versiones futuras podrían requerir desinstalar la anterior.</p>
+      <p><strong>Seguridad:</strong> FTP no cifra la transferencia. Úsalo solo en una red local confiable y no abras el puerto FTP a internet.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>PKG Bridge · Proyecto abierto y experimental. No afiliado a Sony.</span><a href="https://github.com/Gueremy/PKGBridge/issues" rel="noopener noreferrer">Reportar un problema</a></div></footer>
+</body>
+</html>
